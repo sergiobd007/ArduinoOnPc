@@ -37,6 +37,12 @@ sudo apt-get install libx11-dev
 ```
 sudo pacman -Sy libx11
 ```
+## Cloning
+This repository uses git submodules. You can clone this repository and all its
+submodules this way:
+```
+git clone --recurse-submodules https://github.com/ChrisMicro/ArduinoOnPc.git
+```
 ## Compilation
 
 ### Makefile
