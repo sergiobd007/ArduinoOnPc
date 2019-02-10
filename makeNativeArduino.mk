@@ -19,6 +19,7 @@ CFLAGS += -std=gnu11
 CFLAGS += -lm
 
 CXXFLAGS += -Wall -Wextra -Wno-unused-parameter
+CXXFLAGS += -pthread
 CXXFLAGS += -DARDUINO=101 -DSKETCH_FILE=\"$(SKETCH)\"
 CXXFLAGS += -DFASTLED_SDL $(shell sdl2-config --cflags)
 CXXFLAGS += -Wno-class-memaccess # FastLED does some naughty things
@@ -53,7 +54,7 @@ SRCS += $(SRC_C)
 SRCS += $(SRC_CXX)
 
 $(TARGET): $(OBJECTS)
-	$(Q)$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
+	$(Q)$(CXX) $(LDFLAGS) $(OBJECTS) -o $@
 	@size $@
 
 clean:
@@ -70,12 +71,12 @@ print:
 
 $(BUILD_ROOT)/%.o : %.c $(DEPDIR)/%.d
 	@mkdir -p `dirname $@`
-	$(Q)$(CC) $(DEPFLAGS) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(Q)$(CC) $(CFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
 	$(POSTCOMPILE)
 
 $(BUILD_ROOT)/%.o : %.cpp $(DEPDIR)/%.d
 	@mkdir -p `dirname $@`
-	$(Q)$(CXX) $(DEPFLAGS) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+	$(Q)$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
 	$(POSTCOMPILE)
 
 $(DEPDIR)/%.d: ;
