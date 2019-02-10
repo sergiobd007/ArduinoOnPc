@@ -107,6 +107,7 @@ void loop() {
     }
     pattern->drawFrame();
     matrix_show();
+    delay(16);
 }
 
 

@@ -5,7 +5,7 @@
 #define ARRAYSIZE(a) (sizeof(a) / sizeof(*a))
 
 #define M_WIDTH 	75	// the width of the LED matrix
-#define M_HEIGHT	20	// the height of the LED matrix
+#define M_HEIGHT	8	// the height of the LED matrix
 #define NUM_LEDS	(M_WIDTH*M_HEIGHT)
 
 static CRGB leds[NUM_LEDS];

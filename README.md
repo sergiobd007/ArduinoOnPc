@@ -4,7 +4,7 @@
 
 With this software you can run an Arduino Sketch on your PC.
 You don't need an Arduino hardware.
-The focus here is mainly on TFTs connected to an Arduino.
+The focus here is mainly on TFTs and LED matrices connected to an Arduino.
 
 This software is made for Linux using the X11 window manager.
 If you want to use it on windows the only current option is a virtual machine.
@@ -43,6 +43,13 @@ submodules this way:
 ```
 git clone --recurse-submodules https://github.com/ChrisMicro/ArduinoOnPc.git
 ```
+
+If you have alredy cloned the repository you can get them using:
+```
+git submodule init
+git submodule update
+```
+
 ## Compilation
 
 ### Makefile
