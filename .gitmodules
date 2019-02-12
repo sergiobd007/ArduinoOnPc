@@ -1,9 +1,9 @@
-[submodule "libraries/Adafruit-GFX-Library"]
-	path = libraries/Adafruit-GFX-Library
-	url = https://github.com/adafruit/Adafruit-GFX-Library.git
 [submodule "libraries/FastLED"]
 	path = libraries/FastLED
 	url = https://github.com/benpicco/FastLED.git
 [submodule "libraries/FastLED_NeoMatrix"]
 	path = libraries/FastLED_NeoMatrix
 	url = https://github.com/marcmerlin/FastLED_NeoMatrix.git
+[submodule "libraries/Adafruit_GFX"]
+	path = libraries/Adafruit_GFX
+	url = https://github.com/adafruit/Adafruit-GFX-Library.git
